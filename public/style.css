@@ -1,0 +1,194 @@
+#topline{
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  width: 100%;
+  height: 100px;
+}
+#progress{
+  width: 800px;
+  margin: 0 auto;
+}
+#content{
+  width: 800px;
+  margin: 0 auto;
+}
+#variable {
+  box-shadow: -1px 4px 20px 0px #4a515c42;
+  background: #fee9cc;
+  width: 800px;
+  margin: 20 auto;
+  padding: 10px 20px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+#topmenu {
+  width: 800px;
+  margin: 00 auto;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.hidden-button{
+  text-align: right;
+}
+
+.hidden-button a{
+  border-bottom: 1px dashed;
+  text-decoration: none;
+  cursor: pointer;
+}
+.hiddenValue input{
+  transition: opacity 0.5s ease;
+  opacity: 0.5;
+}
+.hiddenValue  input:focus{
+  opacity: 1;
+}
+
+.requiredValue{
+  color: #d30404;
+}
+.hidden-button a:hover{
+  border-bottom: 0px;
+}
+#topmenu a{
+  box-shadow: -1px 4px 20px 0px #4a515c42;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  position: relative;
+  top: -5px;
+  background: white;
+  padding: 10px 20px;
+}
+#sep {
+  padding: 0px 15px;
+
+}
+input{
+  padding: 20px 10px;
+}
+.input-value{
+  width: 100%;
+}
+
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+}
+
+pre, code{
+  cursor: pointer;
+}
+
+#resetCheckboxes{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+kbd {
+    /* Thanks to StackOverflow */
+    padding: 2px 4px;
+    white-space: nowrap;
+    color: black;
+    background: #EEE;
+    border-width: 1px 3px 3px 1px;
+    border-style: solid;
+    border-color: #CCC #AAA #888 #BBB;
+    line-height: 30px;
+    margin: 0px 1px 0px 1px;
+}
+
+.label{
+  cursor: pointer;
+}
+
+#content a:after {
+  image-rendering: pixelated;
+}
+
+a[href^="pass:"]:after {
+  content: url(/ico/key.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href^="nautilus:"]:after {
+  content: url(/ico/folder.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+ a[href^="gvim:"]:after {
+  content: url(/ico/vim16x16.gif);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+ a[href*="howto.html?pth"]:after {
+  content: url(/ico/application_form.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href$="ods"]:after,
+a[href*="docs.google.com/spreadsheets"]:after {
+  content: url(/ico/page_excel.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+a[href^="/##"]:after {
+  content: url(/ico/tag_blue.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href*="calendar.google.com"]:after {
+  content: url(/ico/calendar.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href*="projects.warpa.ru"]:after {
+  content: url(/ico/taiga.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href*="les.bubujka.org"]:after {
+  content: url(/ico/taiga.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href*="reports.bubujka.org"]:after {
+  content: url(/ico/reports.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+a[href*="reports.warpa.ru"]:after {
+  content: url(/ico/reports.png);
+  margin-left: 3px;
+  margin-right: 5px;
+  opacity: 50%;
+}
+
+var{
+  background: #d5fd87;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}

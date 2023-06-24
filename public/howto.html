@@ -1,0 +1,61 @@
+<html>
+<head>
+  <script src='/env.js'></script>
+  <script src='/js/js-yaml.min.js'></script>
+  <script src='/js/yamlFront.js'></script>
+  <script src='/js/marked.min.js'></script>
+  <script src='/js/mousetrap.min.js'></script>
+  <script src='/js/jquery.js'></script>
+  <script src='/js/qs.js'></script>
+  <script src='/js/notify.min.js'></script>
+  <script src='/js/angular.min.js'></script>
+  <script src='/js/geopattern.min.js'></script>
+  <script src='/script.js'></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="icon" href="/favicon.ico">
+  <meta charset=utf8>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="topline"></div>
+  <div id="topmenu">
+  </div>
+    <div id='variable' ng-app="todoApp" ng-controller="TodoListController as todoList">
+      <h1>{{todoList.title}}</h1>
+      <a href="/">&larr; Список рецептов</a> •
+      <a href="{{todoList.editPrefix}}" target='_blank'><img src="/pencil.png">редактировать</a>
+
+      <a id='resetCheckboxes' class="btn small" ng-click="todoList.resetCheckboxes()" ng-if='todoList.checkboxes.length'>сбросить прогресс</a>
+      <div ng-if="todoList.haveVariables()">
+        <h3>Параметры</h3>
+        <div ng-repeat="(key, value) in todoList.variables">
+          <div ng-if="todoList.needToShow(value)" ng-class="{hiddenValue: value.hidden, requiredValue: todoList.valueRequiredAndEmpty(key, value) }">
+            <b>
+              {{value.description}}
+              <span ng-if="value.required">*</span>
+            </b>
+            <i>
+              {{key}}
+            </i>
+            <br>
+            <input ng-change='todoList.replaceAndUpdate()' ng-blur="todoList.restoreScrollPosition()" data-key="{{key}}" type="text" ng-model="todoList.variables[key].value" placeholder="{{todoList.variables[key].example}}" class='input-value'>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="hidden-button" ng-if='todoList.haveHiddenVariables()'>
+          <a ng-click="todoList.toggleHidden()">
+            <span ng-if="!todoList.showHidden">
+              Показать скрытые
+            </span>
+            <span ng-if="todoList.showHidden">
+              Скрыть скрытые
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="progress"></div>
+    <div id="content"></div>
+</body>
+</html>

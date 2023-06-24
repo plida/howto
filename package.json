@@ -1,0 +1,18 @@
+{
+  "name": "howto-basic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aleksej Kamynin <zendzirou@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "setup-dev": "composer install ; yarn",
+    "start": "nf start"
+  },
+  "dependencies": {
+    "foreman": "^3.0.1",
+    "js-yaml": "4.1.0",
+    "marked": "4.0.0",
+    "qs": "^6.10.1",
+    "yaml-front-matter": "4.1.1"
+  }
+}
