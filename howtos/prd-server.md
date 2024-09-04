@@ -1,5 +1,5 @@
 ---
-title: Боевой сервер для php проекта с nodejs
+title: Небоевой сервер для php проекта с nodejs
 tags:
   - php
 variables:
